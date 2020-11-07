@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 import "./Home.scss";
-import Results from "../../Components/Results/Results";
 
 const Home = () => {
 
