@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import "./Photo.scss";
 import Modal from 'react-modal';
 
+
 Modal.setAppElement('#root');
 
 const Photo = ({alt_description, urls, user}) => {
@@ -32,8 +33,14 @@ const Photo = ({alt_description, urls, user}) => {
     }
 
     return (
-        <div className="photo-details" onClick={handleOpenModal}>
-            <img className="photo" src={urls.small} style={{objectFit:'contain'}} alt={alt_description}/>
+        <div 
+        className="photo-details" 
+        onClick={handleOpenModal}>
+            <img 
+            className="photo" 
+            src={urls.regular} 
+            style={{objectFit:'contain'}} 
+            alt={alt_description}/>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={handleCloseModal}
@@ -41,7 +48,10 @@ const Photo = ({alt_description, urls, user}) => {
                 >
                     <header className="modal-header">
                         <div className="modal-author-wrapper">
-                            <img className="modal-author-photo" src={user.profile_image.medium} alt=""/>
+                            <img 
+                            className="modal-author-photo" 
+                            src={user.profile_image.medium} 
+                            alt={user.name}/>
                             <div className="modal-author-details">
                                 <h2 className="modal-author">{user.name}</h2>
                                 <a 
@@ -49,13 +59,18 @@ const Photo = ({alt_description, urls, user}) => {
                                 target={"_blank"}
                                 rel="noreferrer" 
                                 href={`https://www.instagram.com/${user.instagram_username}`}
-                                >@{user.instagram_username}
-                                    </a>
+                                >
+                                    @{user.instagram_username}
+                                </a>
                             </div>
                         </div>
                     </header>
                     <div className="modal-cargo">
-                        <img className="modal-photo" src={urls.regular} style={customStyles} alt={alt_description}/>
+                        <img 
+                        className="modal-photo" 
+                        src={urls.regular} 
+                        style={customStyles} 
+                        alt={alt_description}/>
                     </div>
             </Modal>
         </div>

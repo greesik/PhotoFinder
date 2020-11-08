@@ -1,9 +1,83 @@
-.results-section {
+.home {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .main-container {
+
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+        color: white;
+        font-weight: 700;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .unsplash-link {
+            text-decoration: underline;
+            color: white;
+        }
+
+        form {
+
+            display: flex;
+            justify-content: center;
+
+            .select {
+                width: 500px;
+            }
+
+            input{
+                width: 700px;
+                height: 50px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                padding-left: 20px;
+                font-size: 35px;
+
+                @media (max-width: 1000px){
+                    width: 200px;
+                }
+
+            } 
+
+            #search {
+                height: 50px;
+                width: 100px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                background: white;
+                margin-left: 5px;
+
+                @media (max-width: 1000px){
+                    width: 50px;
+                }
+
+            }
+        }
+    }
+}
+
+#results-section {
     margin: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 400px){
+        margin: 40px 0;
+    }
 
     .results-search-bar-wrapper {
         margin-bottom: 40px;
@@ -16,6 +90,11 @@
             border-radius: 20px;
             background: lightgrey;
             padding-left: 20px;
+
+            @media (max-width: 1000px){
+                width: 300px;
+            }
+
         }
 
     }
@@ -26,6 +105,14 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        
+        
+        @media (max-width: 700px){
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+        }
+
 
         .photo-wrapper:hover {
             cursor: pointer;

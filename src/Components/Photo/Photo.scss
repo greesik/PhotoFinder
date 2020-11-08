@@ -9,6 +9,7 @@
     .photo {
         height: 200px;
         width: auto;
+
     }
 }
 
@@ -63,6 +64,12 @@
         height: 100%;
         width: auto;
         object-fit: contain;
+
+        @media (max-width: 500px){
+            width: 100%;
+            height: auto;
+        }
+
     }
 
 }
