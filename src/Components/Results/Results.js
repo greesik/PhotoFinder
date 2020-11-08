@@ -41,7 +41,7 @@ const Results = () => {
                     <p>The internet's source of 
                         <a 
                         className="unsplash-link" 
-                        href="https://unsplash.com">freely-usable images</a>.
+                        href="https://unsplash.com"> freely-usable images</a>.
                     </p>
                     <p>Powered by creators everywhere.</p>
                     <form onSubmit={handleSubmit}>
