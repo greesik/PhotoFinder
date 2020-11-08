@@ -53,7 +53,7 @@ const Results = () => {
                         to={"results-section"} 
                         smooth={true} 
                         offset={-40} 
-                        delay={400} 
+                        delay={500} 
                         onClick={handleSubmit}>
                             <button id="search">Search</button>
                         </Link>
